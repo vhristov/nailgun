@@ -74,4 +74,14 @@ class NGOutputStream extends java.io.DataOutputStream {
 		}
 		flush();
 	}
+
+	/**
+	 * @see java.io.OutputStream.close()
+	 *
+	 * Implement an empty close function, to allow the client to close
+	 * the stdout and/or stderr, without this closing the connection
+	 * socket to the client.
+	 */
+	public void close() {
+	}
 }
